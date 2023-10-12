@@ -1,7 +1,15 @@
-function hasTargetSum(array, target) {
+function hasTargetSum(array, target){ 
   // Write your algorithm here
+ for(let start=0; start<array.length; ++start){
+  let additive=target-array[start]
+  for(let end=start+1; end<array.length; ++end){
+    if(additive===array[end]){
+      return true
+    }
+  }
+ }
+ return false
 }
-
 /* 
   Write the Big O time complexity of your function here
 */
